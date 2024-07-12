@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+<TITLE>MT MSK Transceiver_lab.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="MT MSK Transceiver_lab.vi"></A><H2>MT MSK Transceiver_lab.vi</H2>
+<P>This example demonstrates generation and analysis of MSK modulated signals. You can specify transmit filter parameters, Eb/No, and frequency offset. This example demonstrates programming techniques for resetting the transmitter in cases where the receiver (demodulator) lock is lost. You can see the results of the demodulation on trellis graphs, and perform measurements such as bit error rate.</P>
+<HR>
+<H3>Connector Pane</H3>
+<P><IMG SRC="MT_MSK_Transceiver__labc.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<HR>
+<H3>Front Panel</H3>
+<P><IMG SRC="MT_MSK_Transceiver__labp.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<HR>
+<H3>Block Diagram</H3>
+<P><IMG SRC="MT_MSK_Transceiver__labd.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<P><IMG SRC="MT_MSK_Transceiver__labd1.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<P><IMG SRC="MT_MSK_Transceiver__labd2.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<P><IMG SRC="MT_MSK_Transceiver__labd3.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<P><IMG SRC="MT_MSK_Transceiver__labd4.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<P><IMG SRC="MT_MSK_Transceiver__labd5.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<P><IMG SRC="MT_MSK_Transceiver__labd6.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<P><IMG SRC="MT_MSK_Transceiver__labd7.png" ALT="MT MSK Transceiver_lab.vi"></P>
+<HR>
+<H3>List of SubVIs and Express VIs with Configuration Information</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Calculate_BER_After_Trigger_(PN_Sequence)i.png" ALT="niDMT.lvlib:MT Calculate BER After Trigger (PN Sequence).vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Calculate BER After Trigger (PN Sequence).vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Demodulation\MT Calculate BER After Trigger (PN Sequence).vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Format_Trellis_Diagrami.png" ALT="niDMT.lvlib:MT Format Trellis Diagram.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Format Trellis Diagram.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\General\MT Format Trellis Diagram.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_mod__MSK_Transmitteri.png" ALT="niDMT.lvlib:mod_MSK Transmitter.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:mod_MSK Transmitter.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Support\examples\mod_MSK Transmitter.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_EbN0_Calculation(MSK)i.png" ALT="niDMT.lvlib:MT EbN0 Calculation(MSK).vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT EbN0 Calculation(MSK).vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Demodulation\MT EbN0 Calculation(MSK).vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Demodulate_MSKi.png" ALT="niDMT.lvlib:MT Demodulate MSK.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Demodulate MSK.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Demodulation\MT Demodulate MSK.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Apply_IQ_Impairmentsi.png" ALT="niDMT.lvlib:MT Apply IQ Impairments.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Apply IQ Impairments.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Impairments\MT Apply IQ Impairments.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_mod__IQ_Impairments_Validatei.png" ALT="niDMT.lvlib:mod_IQ Impairments Validate.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:mod_IQ Impairments Validate.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Support\Common\Validators\mod_IQ Impairments Validate.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_mod__align_TX_and_RX_bit_sequencei.png" ALT="niDMT.lvlib:mod_align TX and RX bit sequence.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:mod_align TX and RX bit sequence.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Support\examples\mod_align TX and RX bit sequence.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Format_Constellationi.png" ALT="niDMT.lvlib:MT Format Constellation.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Format Constellation.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\General\MT Format Constellation.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Add_AWGNi.png" ALT="niDMT.lvlib:MT Add AWGN.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Add AWGN.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Impairments\MT Add AWGN.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="NI__AALBase_lvlib_Gaussian_White_Noise_(obs_90)i.png" ALT="NI_AALBase.lvlib:Gaussian White Noise (obs 90).vi"></P>
+</TD>
+<TD>
+<B><P>NI_AALBase.lvlib:Gaussian White Noise (obs 90).vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\Analysis\1siggen.llb\Gaussian White Noise (obs 90).vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Bit_Stream_to_Digital_Graphi.png" ALT="niDMT.lvlib:MT Bit Stream to Digital Graph.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Bit Stream to Digital Graph.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\General\MT Bit Stream to Digital Graph.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Calculate_EbN0i.png" ALT="niDMT.lvlib:MT Calculate EbN0.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Calculate EbN0.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Demodulation\MT Calculate EbN0.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Calculate_BERi.png" ALT="niDMT.lvlib:MT Calculate BER.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Calculate BER.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Demodulation\MT Calculate BER.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_mod__Compute_FSK_samples_per_symboli.png" ALT="niDMT.lvlib:mod_Compute FSK samples per symbol.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:mod_Compute FSK samples per symbol.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Support\examples\mod_Compute FSK samples per symbol.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="niDMT_lvlib_MT_Measure_MSK_Quadrature_Impairmentsi.png" ALT="niDMT.lvlib:MT Measure MSK Quadrature Impairments.vi"></P>
+</TD>
+<TD>
+<B><P>niDMT.lvlib:MT Measure MSK Quadrature Impairments.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2020\vi.lib\addons\Modulation\Digital\Demodulation\MT Measure MSK Quadrature Impairments.vi</P>
+</TD>
+</TR>
+</Table>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG SRC="MT_MSK_Transceiver__labh.png" ALT="MT MSK Transceiver_lab.vi"></P>
+</BODY>
+</HTML>
